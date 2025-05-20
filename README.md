@@ -1,60 +1,27 @@
-# 🛒 Proyecto Final - Backend Ecommerce (Coderhouse)
+# Backend-II Final Project
+### Alumno: Cristhian Matías Amén
+Este proyecto corresponde al trabajo final del curso Backend-II, en el que se aplicaron los conocimientos vistos durante toda la cursada.
 
-Este es un servidor backend profesionalizado para un sistema de ecommerce, desarrollado con Node.js, Express, MongoDB y Passport. El proyecto incluye autenticación, autorización, creación de productos, manejo de carritos, generación de tickets y control de stock.
+# Estructura del proyecto
+La estructura del proyecto sigue un modelo por capas, con separación de responsabilidades
 
----
+ # Patrón DAO
+Se implementó el Patrón DAO (Data Access Object) para las entidades clave:
 
-## 🚀 Tecnologías utilizadas
+UserDAO
 
-- Node.js + Express
-- MongoDB + Mongoose
-- Passport (estrategias local y JWT)
-- JSON Web Tokens (JWT)
-- DAO + DTO + Repository pattern
-- Variables de entorno (.env)
-- Nodemailer (no implementado en esta entrega)
+ProductDAO 
 
----
+Esto permite separar la lógica de persistencia del resto de la aplicación. 
 
-## ⚙️ Instalación
+# Funcionalidad del carrito
+Se puede:
 
-1. Clonar el repositorio:
-```bash
-git clone <url-del-repo>
-cd <nombre-del-proyecto>
-```
+Agregar productos a un carrito.
 
-2. Instalar dependencias:
-```bash
-npm install
-```
+Realizar la compra.
 
-4. Ejecutar en modo desarrollo:
-```bash
-npm run dev
-```
+Controlar stock 
 
----
-
-## 📄 Variables de entorno (.env)
-
-PORT=8080
-MONGO_URI=mongodb+srv://tomimoure8:2N0VrSAof7Iyedri@cluster0.ivyka1s.mongodb.net/conectaBienDB?retryWrites=true&w=majority&appName=Cluster0
-
----
-
-## 🧪 Funcionalidades principales
-
-- Registro y login de usuarios (`/api/sessions/register` y `/api/sessions/login`)
-- Autenticación con Passport + JWT
-- Rol Admin para crear/editar/eliminar productos
-- Rol User para agregar al carrito y finalizar compra
-- Creación de ticket al finalizar compra
-- Persistencia en MongoDB (con acceso abierto configurado a `0.0.0.0/0`)
-- Estructura escalable: DAO, DTO, controller, service
-
----
-
-## 🧑‍💻 Desarrollado por
-
-Tomás Moure
+# Autenticación
+Se implementó autenticación y autorización con Passport.js, usando estrategias local y JWT. 
