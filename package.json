@@ -1,15 +1,15 @@
 {
-  "name": "back-application-ii",
+  "name": "mi-backend-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto backend con productos, usuarios y sesiones. Todo en una sola app 😎",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["backend", "express", "nodejs", "api", "ecommerce"],
+  "author": " Cristhian Matias Amen",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

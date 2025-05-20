@@ -1,23 +1,23 @@
-import { ProductModel } from '../models/Product.model.js';
+import { productDAO } from '../dao/Product.dao.js';
 
 export class ProductService {
     async getAll() {
-        return ProductModel.find();
+        return await productDAO.getAll();
     }
 
-    async getById(pid) {
-        return ProductModel.findById(pid);
+    async getById(id) {
+        return await productDAO.getById(id);
     }
 
-    async create(data) {
-        return ProductModel.create(data);
+    async create(productData) {
+        return await productDAO.create(productData);
     }
 
-    async update(pid, data) {
-        return ProductModel.findByIdAndUpdate(pid, data, { new: true });
+    async update(id, updatedData) {
+        return await productDAO.update(id, updatedData);
     }
 
-    async delete(pid) {
-        return ProductModel.findByIdAndDelete(pid);
+    async delete(id) {
+        return await productDAO.delete(id);
     }
 }

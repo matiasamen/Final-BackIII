@@ -22,11 +22,11 @@ app.use('/api/carts', cartRoutes)
 app.use('/api/sessions', sessionRoutes)
 
 // Prueba inicial
-app.get('/ping', (req, res) => {
-    res.send('🏓 Pong desde Conecta Bien API');
+app.get('/test-conexion', (req, res) => {
+    res.send('✅ API Conecta Bien responde correctamente');
 });
 
-// Conexion  Mongo y aranque del servidor
+
 const PORT = process.env.PORT || 8080;
 
 const startServer = async () => {
