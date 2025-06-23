@@ -6,10 +6,11 @@
   "type": "module",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "test": "jest"
   },
   "keywords": ["backend", "express", "nodejs", "api", "ecommerce"],
-  "author": " Cristhian Matias Amen",
+  "author": "Cristhian Matias Amen",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -20,9 +21,13 @@
     "nodemailer": "^7.0.2",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "jest": "^30.0.2",
+    "supertest": "^7.1.1"
   }
 }

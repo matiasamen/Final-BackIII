@@ -37,3 +37,10 @@ const startServer = async () => {
 };
 
 startServer();
+
+import adoptionsRouter from './routes/adoptions.routes.js';
+import swaggerConfig from './swagger.js';
+
+app.use('/api/adoptions', adoptionsRouter);
+swaggerConfig(app);
+
