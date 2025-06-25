@@ -6,7 +6,7 @@ const swaggerOptions = {
         openapi: '3.0.1',
         info: {
             title: 'Adoptions API',
-            description: 'API de adopciones mockeadas',
+            description: 'Documentación de la API del proyecto final Backend III (Coderhouse). Incluye endpoints de autenticación, productos, carritos y adopciones simuladas.',
             version: '1.0.0'
         }
     },

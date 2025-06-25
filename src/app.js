@@ -1,4 +1,3 @@
-import express from 'express';
 import dotenv from 'dotenv';
 import passport from 'passport';
 
@@ -10,8 +9,6 @@ import userRoutes from './routes/users.routes.js';
 import productRoutes from './routes/products.routes.js';
 import cartRoutes from './routes/carts.routes.js';
 import sessionRoutes from './routes/sessions.routes.js';
-
-// Nueva ruta: adopciones mockeadas
 import adoptionsRouter from './routes/adoptions.routes.js';
 
 // Swagger (documentación)

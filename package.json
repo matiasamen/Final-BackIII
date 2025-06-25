@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
-    "test": "jest"
+    "test": "set NODE_ENV=test && set NODE_OPTIONS=--experimental-vm-modules && jest"
   },
   "keywords": ["backend", "express", "nodejs", "api", "ecommerce"],
   "author": "Cristhian Matias Amen",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "nodemon": "^3.1.10",
     "jest": "^30.0.2",
-    "supertest": "^7.1.1"
+    "supertest": "^7.1.1",
+    "jest-esm-transformer": "^1.0.0"
   }
 }
