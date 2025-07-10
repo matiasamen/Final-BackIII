@@ -11,8 +11,9 @@ import productRoutes from './routes/products.routes.js';
 import cartRoutes from './routes/carts.routes.js';
 import sessionRoutes from './routes/sessions.routes.js';
 import adoptionsRouter from './routes/adoptions.routes.js';
+import mocksRouter from './routes/mocks.routes.js'; 
 
-// Swagger (documentación)
+// Swagger
 import swaggerConfig from './swagger.js';
 
 dotenv.config();
@@ -30,6 +31,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/carts', cartRoutes);
 app.use('/api/sessions', sessionRoutes);
 app.use('/api/adoptions', adoptionsRouter);
+app.use('/api/mocks', mocksRouter);  // <- Aquí entra /api/mocks/mockingusers
 
 // Swagger docs
 swaggerConfig(app);
@@ -44,7 +46,7 @@ const PORT = process.env.PORT || 8080;
 const startServer = async () => {
     await connectDB();
     app.listen(PORT, () => {
-        console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+        console.log(`Servidor corriendo en http://localhost:${PORT}`);
         console.log(`📘 Documentación en http://localhost:${PORT}/docs`);
     });
 };

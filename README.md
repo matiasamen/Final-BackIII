@@ -35,5 +35,54 @@ Extiende el proyecto del módulo Backend II, incorporando pruebas automáticas, 
 
 ---
 
-## 📂 Estructura general
+# Correcion y aclaracion 
 
+ #    Dockerización del proyecto
+## ⚠️ Esta parte ya estaba realizada, pero me olvidé de subir el paso a paso. La imagen fue creada y subida hace 13 días.
+
+Se implementó la dockerización del proyecto para poder ejecutarlo en un contenedor, cumpliendo con los requerimientos del trabajo de Backend III.
+
+## 📄 Archivo Dockerfile
+## Dockerización del proyecto
+
+Se creó un archivo Dockerfile que permite generar una imagen funcional del proyecto y ejecutarla en un contenedor.
+
+🐳 **Construcción y despliegue con Docker**
+
+### Construir la imagen:
+
+```bash
+docker build -t matiamen2210/conecta-back-mati .
+
+ ### Subir la imagen a Docker Hub 
+
+ docker login
+docker push matiamen2210/conecta-back-mati
+
+### Ejecutar el contenedor con variables de entorno personalizadas:
+docker run -d \
+    --name conecta-back-mati \
+    -p 8080:8080 \
+    -e MONGO_URI="mongodb+srv://<usuario>:<contraseña>@cluster0.mongodb.net/<nombreBaseDeDatos>?retryWrites=true&w=majority" \
+    matiamen2210/conecta-back-mati
+
+### Verifica que la API esté corriendo en:
+👉 http://localhost:8080
+
+### 📦 Imagen publicada en Docker Hub:
+https://hub.docker.com/r/matiamen2210/conecta-back-mati
+
+# 🧪 Mocking de usuarios con Faker.js
+Se incorporó correctamente la funcionalidad de mocking solicitada en el trabajo de Backend III.
+
+📄 Archivo: src/routes/mocks.routes.js
+
+📦 Dependencia: @faker-js/faker
+
+🔀 Ruta implementada: GET /api/mocks/mockingusers
+
+🔧 Datos generados: 50 usuarios con id, name, email, age y address ficticios.
+
+✅ Integrado en app.js mediante app.use('/api/mocks', mocksRouter)
+
+Esta parte fue corregida y agregada ya que me la había olvidado inicialmente.
